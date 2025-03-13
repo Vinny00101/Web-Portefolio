@@ -1,0 +1,39 @@
+.Container-Skils{
+    height: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    .LP-tithe, 
+    .BE-tithe, 
+    .FE-tithe{
+        margin: 2%;
+        flex-wrap: wrap;
+        height: 300px;
+        width: 100%;
+        border-radius: 1rem;
+        border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        padding: 2%;
+        .LP-titheDiv, 
+        .BE-titheDiv, 
+        .FE-titheDiv{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media(max-width: 800px){
+    .Container-Skils{
+        flex-wrap: wrap;
+    }
+}

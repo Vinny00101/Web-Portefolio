@@ -1,0 +1,82 @@
+.home{
+    display: flex;
+    padding: 10% 4%;
+    justify-content: center;
+    align-items: center;
+    height: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    h1{
+        color: white;
+        font-size: 4.5vw;
+    }
+
+    span{
+        color: rgb(242, 50, 25);
+        text-decoration: underline;
+        font-size: 4.5vw;
+    }
+}
+
+.Sobre{
+    display: flex;
+    height: flex;
+    padding: 4%;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: white;
+    span{
+        color: rgb(242, 50, 25);
+    }
+    .Sobre-me{
+        padding: 5%;
+        border: 2px solid red;
+        border-radius: 1rem;
+        flex: 4 1;
+    }
+    .contant{
+        display: flex;
+    }
+    
+    .social-icons{
+        flex: 1 1;
+        display: flex;
+        padding: 2% 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .social-icons a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        border: 0.2rem solid rgb(242, 50, 25);
+        font-size: 2rem;
+        border-radius: 50%;
+        margin: 0.1rem 1.5rem 3rem;
+        transition: 0.3s ease;
+    }
+    .social-icons a:hover{
+        transform: scale(1.4);
+        background-color: rgb(242, 50, 25);
+        color: white;
+        border:0.1rem solid white;
+        box-shadow: 0px 3px 15px 1px red;
+    }
+}
+
+
+@media(max-width: 800px){
+    .Sobre{
+        .social-icons{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

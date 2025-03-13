@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body
+{
+    width: 100%;
+    height: 100%;
+}
+
+#snow-container {  
+    height: 100%;
+    overflow-x: hidden;
+    position: 1;
+    top: 0;
+    transition: opacity 500ms;
+    width: 80%;
+}
+  
+.snow {
+    animation: fall ease-in infinite, sway ease-in-out infinite;
+    color: red;
+    position: absolute;
+}
+
+@keyframes fall {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 1;
+    }
+  }
+/*
+  @keyframes sway {
+    0% {
+      padding-left: 0;
+    }
+    25% {
+      padding-left: 50px;
+    }
+    50% {
+      padding-left: -50px;
+    }
+    75% {
+      padding-left: 50px;
+    }
+    100% {
+      padding-left: 0;
+    }
+  }
+
+*/

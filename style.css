@@ -12,120 +12,137 @@ html{
 
 body{
     width: 100%;
-    height: 100vw;
-    overflow: hidden;
-    background-color: rgb(0, 0, 0);
+    height: 100%;
+    background-color: rgb(8, 8, 8);
+}
+
+main{
+    flex-grow: 1;
+    .title{
+        text-transform: uppercase;
+        font-size: 4vw;
+        color: white;
+        padding-bottom: 6%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.Conteudo{
+    display: flex;
+    flex-direction: column;
 }
 
 header{
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
     width: 100%;
-    padding: 1rem 9%;
-    background: linear-gradient(to right, rgba(80, 232, 255, 0.4), rgba(8, 106, 119, 0.2));
+    background: black;
+    border-bottom: 2px solid rgb(242, 50, 25);
+    box-shadow: 0px 22px 45px -23px rgb(242, 50, 25);
+    .Logo{
+        display: flex;
+        height: 50px;
+        position: absolute;
+        padding: 0 9%;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+    .Logo:hover{
+        transform: scale(1.4);
+    }
+    .infor{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        ul{
+            width: 100%;
+            padding: 0 9%; 
+        }
+        .ul-infor{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 2rem;
+        }
+        .Link-infor{
+            height: 100%;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* 
+        aqui e o Open menu da navBar
+        */
+        .OpenMenu{
+            height: 100%;
+            display: none;
+            align-items: center;
+            button{
+                background-color: transparent;
+                border: none;
+                font-size: 2rem;
+                i{
+                    color: white;
+                }
+            }
+            
+        }
+    }
+    li, a{
+        margin-right: 10px;
+        color: rgb(242, 50, 25);
+    }
+    li:hover{
+        transform: scale(1.2);
+        text-decoration: underline;
+        transition: 65ms;
+        color: rgb(232, 52, 52);
+    }
 }
-.Logo{
-    font-size: 3rem;
-    color: rgb(91, 255, 239);
-}
-.Logo:hover{
-    transform: scale(1.4);
-}
-.infor{
-    display: flex;
+
+.ul-infor-Menu{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     list-style: none;
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    background: black;
+    box-shadow: 0px 55px 45px -60px rgb(242, 50, 25);
     font-size: 2rem;
 }
-li, a{
-    margin-right: 10px;
-    color: rgb(255, 255, 255);
-}
-li:hover{
-    transform: scale(1.2);
-    text-decoration: underline;
-    transition: 65ms;
-    color: rgb(52, 67, 232);
-}
-.home{
-    margin-top: 50px;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.home-content{
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.home-content h1{
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    color: white;
-}
-span{
-    color: rgb(91, 255, 239);
-}
-.home-content h3{
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    color: white;
-}
-.home-content p{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    color: white;
-}
-.home-img{
-    border-radius: 35%;
-}
-.home-img img{
-    border-radius: 35%;
-    position: relative;
-    width: 55vw;
-}
-.social-icons a{
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   width: 4rem;
-   height: 4rem;
-   color: rgb(255, 255, 255);
-   background-color: transparent;
-   border: 0.2rem solid rgb(113, 196, 207);
-   font-size: 2rem;
-   border-radius: 50%;
-   margin: 3rem 1.5rem 3rem;
-   transition: 0.3s ease;
-}
-.social-icons a:hover{
-    transform: scale(1.4);
-    background-color: rgb(113, 196, 207);
-    color: black;
-    border:0.2rem solid black ;
-}
-.tipo-text span{
-    position: relative;
-}
-.tipo-text span::before{
-    content: "Web Developer";
-    animation: words 20s infinite;
 
-}
-.tipo-text span::after{
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: calc(0%);
-    height: 100%;
-    border-left: 3px solid black;
-    right: -8;
-    animation: cursor 0.6s infinite;
+.footer-infor{
+    height: flex;
+    padding: 6% 9%;
+    color: rgb(242, 50, 25);
+    background: black;
+    border-top: 2px solid rgb(242, 50, 25);
+    .Container-footer{
+        display: flex;
+        font-size: 15px;
+    }
+    .infor-page,
+    .Contato-infor{
+        padding: 0 1%;
+        border-left: 2px solid white;
+    }
+    h2{
+        text-transform: uppercase;
+    }
+    p{
+        color: rgb(207, 206, 206);
+    }
 }
 @keyframes cursor{
     to{
@@ -150,6 +167,9 @@ span{
     body{
         overflow: auto;
     }
+    .social-icons{
+        display: flex;
+    }
     .home{
         display: flex;
         flex-direction: column;
@@ -169,49 +189,42 @@ span{
     }
 }
 @media(max-width: 800px){
-    .home{
-        height: 110vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
+    header{
+        .infor{
+            .Link-infor{
+                display: none;
+            }
+            .OpenMenu{
+                display: flex;
+            }
+        }
     }
-    .home-content h1{
-        font-size: 3rem;
-    }
-    .home-content h3{
-        font-size: 3rem;
-    }
-    .home-content p{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    .home-img img{
-        width: 76vw;
-    }
-}
-@media(max-width: 600px){
-    .home{
-        height: 160vw;
-        display: flex;
+
+    .contant{
         flex-direction: column;
-        justify-content: center;
+        .social-icons{
+            flex-direction: row;
+        }
     }
-    .home-content h1{
-        font-size: 3rem;
+
+    .footer-infor{
+        .Container-footer{
+            flex-direction: column;
+        }
+        .infor-page,
+        .Contato-infor{
+            padding: 1% 0%;
+            border-left: none;
+        }
     }
-    .home-content h3{
-        font-size: 3rem;
-    }
-    .home-content span{
-        font-size: 3rem;
-    }
-    .home-content p{
-        margin-top: 20px;
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    .home-img img{
-        width: 76vw;
+
+    .home{
+        font-size: 20vw;
+        height: 80vw;
+        h1,
+        span{
+            font-size: 5vw;
+        }
     }
 }

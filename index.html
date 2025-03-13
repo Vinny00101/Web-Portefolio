@@ -5,32 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potifolio de Vini</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="view/Style/ParticulasLava.css">
+    <link rel="stylesheet" href="view/Style/ContainerSkils.css">
+    <link rel="stylesheet" href="view/Style/homeSobre.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" type="image/png" href="img/iconV 32px.png">
+    <link rel="icon" type="image/png" href="view/img/iconV 32px.png">
 </head>
 <body>
-    <header>
-        <a href="#" class="Logo">VINI</a>
-        <nav class="infor">
-            <li><a href="#" class="ativo">HOME</a></li>
-            <li><a href="#">SOBRE</a></li>
-            <li><a href="#">CONTATO</a></li>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="img/Img-Anime-teste.webp" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Ola, meu nome é <span>Vini</span></h1>
-            <h3 class="tipo-text">Eu sou um <span></span></h3>
-            <p>Estou cursando Sistemas de Informação. Sou apaixonado pelo mundo computacional e, apesar de ter pouco tempo na área, estou ansioso para adquirir diversas experiências em programação. Fora do ambiente profissional, tenho um hobby em desenhar, o que me proporcionou uma excelente base em design. Se quiser saber mais sobre mim, fique à vontade para entrar em contato!</p>
-            <div class="social-icons">
-                <a href="https://github.com/Vinny00101"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/vinny_sousa101?igsh=MTl0Y245a3h6emF0MQ=="><i class="fab fa-instagram"></i></a>    
-                <a href="https://www.linkedin.com/in/vinicius-andrade-0b9a8432a/"><i class="fab fa-linkedin"></i></a>    
+    <div class="Conteudo" id="Conteudo">
+        <header>
+            <nav class="infor">
+                <div class="Logo"><a href="/" class="ativo">VINI</a></div>
+                <ul class="ul-infor">
+                    <li class="Link-infor"><a href="/" class="ativo">HOME</a></li>
+                    <li class="Link-infor"><a href="#Sobre" onclick="navegation(event, 'Sobre')">SOBRE</a></li>
+                    <li class="Link-infor"><a href="#Skils" onclick="navegation(event, 'Skils')">SKILS</a></li>
+                    <li class="Link-infor"><a href="#Contato" onclick="navegation(event, 'Contato')">CONTATO</a></li>
+                    <li class="OpenMenu"><button id="OpenMenu" type="button" title="Abrir Menu" onclick="OpenMenu()"><i class="fas fa-bars"></i></button> </li>
+                </ul>  
+                <ul id="infor-Menu" class="ul-infor-Menu">
+                    <li><a href="/" class="ativo">HOME</a></li>
+                    <li><a href="#Sobre" onclick="navegation(event, 'Sobre')">SOBRE</a></li>
+                    <li><a href="#Skils" onclick="navegation(event, 'Skils')">SKILS</a></li>
+                    <li><a href="#Contato" onclick="navegation(event, 'Contato')">CONTATO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Conteudo principal abaixo-->
+        <main>
+            <div class="home">
+                <h1>Bem-vindo ao meu portfólio!</h1>
+                <span>Meu nome é Vinny.</span>
             </div>
+            <div class="Sobre" id="Sobre">
+                <h1 class="title">Sobre-me</h1>
+                <div class="contant">
+                    <p class="Sobre-me">
+                        Sou apaixonado por tecnologia e a cada passo neste vasto mundo, 
+                        desfruto de novos desafios. Atualmente, estou cursando <span>Sistemas 
+                        de Informação.</span> Tenho experiência com front-end, mas no momento 
+                        estou focado nos estudos de back-end. Este site apresenta um pouco de mim 
+                        e das minhas habilidades. <span>Seja muito bem-vindo!</span>
+                    </p>
+                    <div class="social-icons">
+                        <a title="link github" href="https://github.com/Vinny00101"><i class="fab fa-github"></i></a>
+                        <a title="link insta" href="https://www.instagram.com/vinny_sousa101?igsh=MTl0Y245a3h6emF0MQ=="><i class="fab fa-instagram"></i></a>    
+                        <a title="link linke" href="https://www.linkedin.com/in/vinicius-andrade-0b9a8432a/"><i class="fab fa-linkedin"></i></a>    
+                    </div>
+                </div>
+            </div>
+            <div class="Skils" id="Skils">
+                <h1 class="title">Skils & habilidades</h1>
+                <div class="Container-Skils" id="Container-Skils">
+                    <div class="Container-Skils" id="Container-Skils">
+                        <div class="LP-tithe">
+                            <h3>Linguangem de Programacao</h3>
+                            <div class="LP-titheDiv" id="LP-titheDiv">
+                                <p>C</p>
+                                <p>C#</p>
+                                <p>Python</p>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                        <div class="BE-tithe">
+                            <h3>Back-end</h3>
+                            <div class="BE-titheDiv">
+
+                            </div>
+                        </div>
+                        <div class="FE-tithe">
+                            <h3>Front-end</h3>
+                            <div class="FE-titheDiv">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
         </div>
-    </section>
+        <div id="snow-container" title="Particulas de lavas"></div>
+        <footer class="footer-infor">
+            <div class="Container-footer">
+                <div class="infor-page" id="infor">
+                    <h2>Informação da Pagina</h2>
+                    <p>Esta página web tem como objetivo me apresentar, 
+                        junto com as habilidades que estou adquirindo em minha carreira. 
+                        Além disso, apresento alguns dos projetos que realizei ao longo do 
+                        meu curso de Sistemas de Informação.
+                    </p>
+                </div>
+                <div class="Contato-infor" id="Contato">
+                    <h2>Contato</h2>
+                    <p>Telefone:00000000</p>
+                    <p>Email:vini123gtbr@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+        <script src="view/js/scriptPrincipal.js"></script>
+        <script src="view/js/EfeitoBackground.js"></script>
+        <script src="view/js/SkilsHab.js"></script>
+    </div>
 </body>
 </html>
